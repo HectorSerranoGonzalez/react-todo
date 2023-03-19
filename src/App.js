@@ -22,7 +22,7 @@ function App() {
           <ul>
             {todoList.map(function(item) {
               return (
-                <li key={item.objectID}>
+                <li key={item.id}>
                   <span>{item.id}</span>
                   <span>{item.title}</span>
                 </li>
