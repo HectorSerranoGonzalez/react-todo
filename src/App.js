@@ -16,7 +16,7 @@ const todoList = [
 
 function App() {
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div style={{ textAlign: 'left' }}>
       <header>
         <h1>Todo List</h1>
           <ul>
