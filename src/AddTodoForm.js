@@ -4,7 +4,7 @@ function AddTodoForm(props) {
     const [inputText, setInputText] = React.useState("");
         function handleAddTodo(event) {
             event.preventDefault(); //Prevents default behavior of the form submit
-            let todoTitle = inputText; //Retrives the value of title element from target and stores it in todoTitle
+            let todoTitle = event.target.title.value; //Retrives the value of title element from target and stores it in todoTitle
             console.log(todoTitle); //Logs the value of todoTitle
             setInputText(''); //Resets Form
             props.onAddTodo(todoTitle);
