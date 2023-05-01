@@ -1,6 +1,6 @@
 import React from "react";
 
-function AddTodoForm({ onAddTodo}) {
+function AddTodoForm({onAddTodo}) {
     const [todoTitle, setTodoTitle] = React.useState("");
         function handleTitleChange(event) {
             let newTodoTitle = event.target.value; //Retrives the value of title element from target and stores it in todoTitle
@@ -11,12 +11,16 @@ function AddTodoForm({ onAddTodo}) {
             event.preventDefault();
                 if (todoTitle==="") {
                     alert ("Empty Form");
+                    return;
                 } else {
                     onAddTodo({title: todoTitle, id: Date.now()});
                     console.log(todoTitle);
                     setTodoTitle('');
                 }
-}
+                // console.log(todoTitle.id);
+                // onAddTodo({title: todoTitle, id: Date.now()});
+                // setTodoTitle('');
+};
 
     return (
         <form onSubmit={handleAddTodo}>

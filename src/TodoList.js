@@ -16,12 +16,13 @@ import TodoListItem from "./TodoListItem";
      },
   ]; */
 
-let TodoList = function({ todoList }) {
+function TodoList({todoList}) {
     return (
           <ul>
-              {todoList.map (function(todo) {
-                return <TodoListItem key={todo.id.toString()} todo={todo} />;
-                })}
+              {todoList.map(function(todo){
+                return(
+                <TodoListItem key={todo.id} todo={todo} />
+                )})}
           </ul>
       );
 }
