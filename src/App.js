@@ -19,16 +19,21 @@ function App() {
 /*   const [newTodo, setNewTodo] = React.useState(''); */
      const [todoList, setTodoList] = useSemiPersistentState("");
 
-function addTodo(newTodo){
-  setTodoList([...todoList, newTodo])
-}
+  function removeTodo(id) {
+    const newTodoList = todoList.filter((todo) => todo.id !== id);
+    setTodoList(newTodoList);
+  };
+
+  function addTodo(newTodo){
+    setTodoList([...todoList, newTodo]);
+  };
 
   return (
-    <div>
+    <>
         <h1>Todo List</h1>
           <AddTodoForm onAddTodo={addTodo} />
-          <TodoList todoList={todoList}/>
-    </div>
+          <TodoList onRemoveTodo={removeTodo} todoList={todoList}/>
+    </>
   );
 }
 
