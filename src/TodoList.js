@@ -16,14 +16,20 @@ import TodoListItem from "./TodoListItem";
      },
   ]; */
 
-function TodoList({todoList}) {
+function TodoList({todoList, onRemoveTodo}) {
     return (
           <ul>
               {todoList.map(function(todo){
                 return(
-                <TodoListItem key={todo.id} todo={todo} />
-                )})}
+                  <TodoListItem 
+                    onRemoveTodo={onRemoveTodo}
+                    key={todo.id}
+                    id={todo.id}
+                    title={todo.title} 
+                  />
+                );
+                })}
           </ul>
       );
-}
+};
 export default TodoList;
