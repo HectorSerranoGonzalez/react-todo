@@ -20,12 +20,13 @@ function TodoList({todoList, onRemoveTodo}) {
     return (
           <ul>
               {todoList.map(function(todo){
+                console.log("test2", todo);
                 return(
                   <TodoListItem 
                     onRemoveTodo={onRemoveTodo}
                     key={todo.id}
                     id={todo.id}
-                    title={todo.title} 
+                    title={todo.fields.title} 
                   />
                 );
                 })}

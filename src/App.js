@@ -39,7 +39,7 @@ function App() {
       });
 
   }, []);
-
+console.log("test", todoList);
   React.useEffect(() => {
     if (!isLoading) {
       localStorage.setItem("savedTodoList", JSON.stringify(todoList));
