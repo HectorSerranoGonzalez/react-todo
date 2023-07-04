@@ -1,6 +1,7 @@
 import React from "react";
 import TodoListItem from "./TodoListItem";
 
+
 /* const todoList = [
     {
       id: 1,
@@ -20,7 +21,6 @@ function TodoList({todoList, onRemoveTodo}) {
     return (
           <ul>
               {todoList.map(function(todo){
-                console.log("test2", todo);
                 return(
                   <TodoListItem 
                     onRemoveTodo={onRemoveTodo}
