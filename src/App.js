@@ -25,7 +25,7 @@ function App() {
     ).then((result) => {
     setTodoList(result.data.todoList);
     setIsLoading(false);
-    }); */
+    }); dfrf d */
 
     fetch(`${API_ENDPOINT}`, {
       method: "GET",
